@@ -1,9 +1,9 @@
 # EDA Summary
 
 ## Dataset Overview
-- Rows: 46
-- Columns: 4
-- Date Range: No date column found
+- Rows: 300
+- Columns: 5
+- Date Range: 2025-01-01 to 2025-10-27
 
 ## Rule Violations
 - Humidity outside 0-100%: 0
@@ -12,18 +12,18 @@
 
 ## Summary Statistics
 
-       temperature   humidity         co2      yield
-count    46.000000  46.000000   46.000000  46.000000
-mean     24.873913  86.000000  662.673913   1.845652
-std       0.714745   1.577621   14.968195   0.116822
-min      23.600000  84.000000  638.000000   1.700000
-25%      24.400000  85.000000  651.250000   1.800000
-50%      24.800000  86.000000  661.000000   1.800000
-75%      25.400000  87.000000  674.750000   1.900000
-max      26.200000  89.000000  692.000000   2.100000
+                      date  temperature    humidity          co2       yield
+count                  300   300.000000  300.000000   300.000000  300.000000
+mean   2025-05-30 12:00:00    21.991667   86.935500   906.603333   13.981433
+min    2025-01-01 00:00:00    17.140000   79.590000   684.000000   12.550000
+25%    2025-03-16 18:00:00    20.975000   84.885000   854.000000   13.597500
+50%    2025-05-30 12:00:00    22.090000   86.940000   903.000000   13.955000
+75%    2025-08-13 06:00:00    22.940000   88.847500   957.000000   14.360000
+max    2025-10-27 00:00:00    27.780000   96.240000  1111.000000   15.650000
+std                    NaN     1.476335    2.884695    79.760255    0.573280
 
 ## Insights
-1. Humidity shows a relationship with mushroom yield.
-2. CO2 concentration may influence production levels.
-3. Correlation analysis identifies the strongest yield predictors.
-4. The cleaned dataset is suitable for machine learning.
+1. Temperature shows a positive relationship with mushroom yield.
+2. Humidity contributes to yield stability inside the polyhouse.
+3. CO2 levels influence mushroom growth and productivity.
+4. Correlation analysis highlights the strongest environmental drivers of yield.
