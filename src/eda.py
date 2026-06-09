@@ -71,12 +71,24 @@ for col in df.columns:
 
 numeric_df = df.select_dtypes(include="number")
 
+# Calculate correlation matrix
+corr_matrix = numeric_df.corr()
+
+# Print correlation matrix in terminal
+print("\nCorrelation Matrix:")
+print(corr_matrix)
+
 plt.figure(figsize=(8, 6))
 
 sns.heatmap(
-    numeric_df.corr(),
+    corr_matrix,
     annot=True,
-    cmap="coolwarm"
+    fmt=".2f",
+    cmap="coolwarm",
+    vmin=-1,          # Fix color scale minimum
+    vmax=1,           # Fix color scale maximum
+    center=0,         # White color at zero correlation
+    linewidths=0.5
 )
 
 plt.title("Sensor & Yield Correlations")
@@ -88,6 +100,7 @@ plt.savefig(
     dpi=300
 )
 
+plt.show()      # Display heatmap on screen
 plt.close()
 
 # ==========================================
