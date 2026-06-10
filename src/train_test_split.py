@@ -1,6 +1,16 @@
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 import joblib
+from pathlib import Path
+
+# ==========================================
+# Create Models Folder
+# ==========================================
+
+Path("models").mkdir(
+    parents=True,
+    exist_ok=True
+)
 
 # ==========================================
 # Load and Sort Data
@@ -64,6 +74,12 @@ joblib.dump(
     "data/processed/train_scaler.pkl"
 )
 
+# Required by Task 4
+joblib.dump(
+    scaler,
+    "models/scaler.joblib"
+)
+
 # ==========================================
 # Save Train/Test Files
 # ==========================================
@@ -108,5 +124,9 @@ print(
 
 print(f"\nTrain rows: {len(train)}")
 print(f"Test rows: {len(test)}")
+
+print("\nScaler saved to:")
+print(" - data/processed/train_scaler.pkl")
+print(" - models/scaler.joblib")
 
 print("\nFiles Saved Successfully")
