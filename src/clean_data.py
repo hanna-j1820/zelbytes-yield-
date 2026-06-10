@@ -8,7 +8,7 @@ df = pd.read_csv(raw_file)
 
 null_before = df.isnull().sum()
 
-for col in df.columns:
+for col in df.columns:a
     if df[col].dtype in ["float64", "int64"]:
         df[col] = df[col].fillna(df[col].median())
     else:
