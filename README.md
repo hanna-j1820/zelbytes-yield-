@@ -156,3 +156,8 @@ The Tuned Random Forest model was selected as the champion model because it achi
 ## Conclusion
 
 GridSearchCV successfully identified an improved Random Forest configuration. The tuned Random Forest slightly outperformed both the Linear Regression baseline and the default Random Forest model, making it the final champion model for yield prediction.
+
+
+## Live Application
+
+https://mushroom-yield-forecast.streamlit.app
